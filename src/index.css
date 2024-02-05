@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Grotesque No 9 Regular";
+  src: url(/src/assets/fonts/Grotesque\ No.\ 9\ W01\ Regular.ttf);
+}
+@font-face {
+  font-family: "ZT Ravigsfen Regular";
+  src: url(/src/assets/fonts/ZtRavigsfenRegular-mL51v.otf);
+}
+
+.font-primary {
+  font-family: "Grotesque No 9 Regular", Impact, Haettenschweiler,
+    "Arial Narrow Bold", sans-serif;
+}
+.font-secondary {
+  font-family: "ZT Ravigsfen Regular", sans-serif;
+}
+.font-tertiary {
+  font-family: "Montserrat", sans-serif;
+}
+.font-body {
+  font-family: "Inter", sans-serif;
+}
+.font-body-sec {
+  font-family: "Archivo", sans-serif;
+}
+.font-handwriting {
+  font-family: "Sue Ellen Francisco", cursive;
+}
+/* Styling */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+body {
+  background-color: #c8e8ff;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+.hover-underline-animation {
+  position: relative;
+}
+.hover-underline-animation::before {
+  content: "";
+  width: 0px;
+  transform: translateX(-2%);
+  height: 1px;
+  border: 0px solid black;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 200ms;
+}
+.hover-underline-animation:hover::before {
+  width: 105%;
+  border-width: 1px;
+}
+
+.text-shadow {
+  text-shadow: 5.427px 5.427px 0px #000;
+  -webkit-text-stroke-width: 1.08;
+  -webkit-text-stroke-color: #000;
+}
+@media screen and (max-width: 1024px) {
+  .text-shadow {
+    text-shadow: 2.931px 2.931px 0px #000;
+  }
+}
+.swiper-wrapper {
+  overflow: visible;
+  transition-timing-function: linear;
+}
+.swiper-slide {
+  cursor: pointer;
+  filter: brightness(90%);
+  transition: 200ms;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.swiper-slide img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.swiper-slide:hover {
+  filter: brightness(100%);
+  transform: scale(1.1);
+}
+@media screen and (min-width: 1460px) {
+  .largeScreenWidth {
+    top: -18rem;
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-height: 800px) and (min-width: 1000px) {
+  .hero-heading {
+    font-size: 160px !important;
+    line-height: 80%;
+    text-shadow: 4px 4px 0px #000;
+  }
+  .hero-subheading {
+    font-size: 40px !important;
+  }
+  .quote {
+    font-size: 16px;
+  }
+  .quote-wrapper {
+    bottom: 5%;
+  }
+}
+@media screen and (min-height: 850px) and (min-width: 1100px) {
+  .heroCartoon {
+    width: 45vw !important;
+    max-width: 800px !important;
+    right: 10% !important;
+  }
+}
